@@ -1,275 +1,196 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Urban Loops | Premium Streetwear Denim</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<title>Urban Loops</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
+font-family: Arial, sans-serif;
 }
 
 body{
-background:#ffffff;
-color:#111;
-}
-
-header{
-position:fixed;
-width:100%;
-top:0;
-left:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 30px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-z-index:1000;
+background:#000;
 color:#fff;
 }
 
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 25px;
+background:#000;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
 .logo{
-font-weight:800;
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+font-size:20px;
+}
+
+.logo-box{
+width:28px;
+height:28px;
+border:2px solid #fff;
+border-radius:6px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+}
+
+.menu-icon{
+font-size:28px;
+cursor:pointer;
+}
+
+/* OVERLAY MENU */
+.menu-overlay{
+position:fixed;
+top:-100%;
+left:0;
+width:100%;
+height:100vh;
+background:#000;
+transition:0.4s ease;
+z-index:2000;
+padding:80px 30px;
+}
+
+.menu-overlay.active{
+top:0;
+}
+
+.menu-overlay a{
+display:block;
+margin:25px 0;
+font-size:20px;
+text-decoration:none;
+color:#fff;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+right:25px;
+font-size:28px;
+cursor:pointer;
+}
+
+/* HERO SECTION */
+.hero{
+height:100vh;
+background:url('hero-bg.jpg') center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.95));
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:52px;
+font-weight:900;
+letter-spacing:3px;
+}
+
+.hero h2{
+color:#4da3ff;
+margin-top:15px;
 font-size:20px;
 letter-spacing:2px;
 }
 
-.hero{
-height:100vh;
-background:url('IMG_2553.png') center/cover no-repeat;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-padding:20px;
-}
-
-.hero h1{
-font-size:48px;
-font-weight:800;
-margin-bottom:20px;
-}
-
 .hero p{
-font-size:18px;
-max-width:600px;
-margin-bottom:30px;
-}
-
-.btn-primary{
-background:#fff;
-color:#000;
-padding:15px 35px;
-border-radius:40px;
-font-weight:600;
-text-decoration:none;
-transition:0.3s;
-}
-
-.btn-primary:hover{
-background:#000;
-color:#fff;
-}
-
-.section{
-padding:80px 20px;
-text-align:center;
-}
-
-.section h2{
-font-size:36px;
-margin-bottom:20px;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.card{
-background:#f7f7f7;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card img{
-width:100%;
-height:320px;
-object-fit:cover;
-}
-
-.card-content{
-padding:25px;
-}
-
-.price{
-margin:10px 0;
-font-weight:600;
-}
-
-.btn-black{
-display:inline-block;
 margin-top:15px;
-background:#000;
-color:#fff;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-size:14px;
-transition:0.3s;
+color:#ccc;
+max-width:500px;
 }
 
-.btn-black:hover{
-background:#333;
-}
-
-.about{
-background:#f4f4f4;
-padding:80px 20px;
-}
-
-.about-box{
-max-width:600px;
-margin:20px auto;
-background:#fff;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-.cta{
-background:#000;
-color:#fff;
-padding:80px 20px;
-text-align:center;
-}
-
-.cta a{
+.btn{
+margin-top:30px;
 display:inline-block;
-margin:10px;
 padding:15px 40px;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-}
-
-.cta .whatsapp{
 background:#fff;
 color:#000;
-}
-
-.cta .instagram{
-border:2px solid #fff;
-color:#fff;
-}
-
-footer{
-background:#111;
-color:#fff;
-padding:40px 20px;
-text-align:center;
-font-size:14px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 
 @media(max-width:768px){
 .hero h1{
-font-size:34px;
+font-size:38px;
 }
 }
-
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">URBAN LOOPS</div>
-</header>
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo">
+<div class="logo-box">UL</div>
+Urban Loops
+</div>
+<div class="menu-icon" onclick="openMenu()">☰</div>
+</div>
 
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menu">
+<div class="close-btn" onclick="closeMenu()">✕</div>
+<a href="#">Products</a>
+<a href="#">About</a>
+<a href="https://instagram.com/zamzam_vintage_" target="_blank">Instagram</a>
+</div>
+
+<!-- HERO -->
 <section class="hero">
-<h1>Premium Streetwear Denim</h1>
-<p>Authentic baggy hip-hop jeans & embroidered denim for modern urban lifestyle.</p>
-<a href="#products" class="btn-primary">SHOP COLLECTION</a>
-</section>
-
-<section class="section" id="products">
-<h2>Our Collection</h2>
-
-<div class="products">
-
-<div class="card">
-<img src="IMG_2553.png">
-<div class="card-content">
-<h3>Baggy Jeans 01</h3>
-<div class="price">£13 Per Piece | MOQ 25</div>
-<a href="https://wa.me/447561587249" class="btn-black">Order via WhatsApp</a>
-</div>
-</div>
-
-<div class="card">
-<img src="IMG_2108.png">
-<div class="card-content">
-<h3>Baggy Jeans 02</h3>
-<div class="price">£13 Per Piece | MOQ 25</div>
-<a href="https://wa.me/447561587249" class="btn-black">Order via WhatsApp</a>
-</div>
-</div>
-
-<div class="card">
-<img src="IMG_1793.jpeg">
-<div class="card-content">
-<h3>Embroidered Denim 01</h3>
-<div class="price">£13 Per Piece | MOQ 25</div>
-<a href="https://wa.me/447561587249" class="btn-black">Order via WhatsApp</a>
-</div>
-</div>
-
+<div class="hero-content">
+<h1>URBAN<br>LOOPS</h1>
+<h2>PREMIUM STREETWEAR DENIM</h2>
+<p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
+<a href="#collection" class="btn">SHOP COLLECTION ↓</a>
 </div>
 </section>
 
-<section class="about">
-<h2>About Urban Loops</h2>
-
-<div class="about-box">
-<h3>Premium Quality</h3>
-<p>Hand-picked premium denim with authentic streetwear fit and finish.</p>
-</div>
-
-<div class="about-box">
-<h3>Worldwide Shipping</h3>
-<p>Wholesale bulk orders shipped globally with secure handling.</p>
-</div>
-
-</section>
-
-<section class="cta">
-<h2>Ready To Order?</h2>
-<p>Contact us directly via WhatsApp or follow us on Instagram</p>
-<a href="https://wa.me/447561587249" class="whatsapp">WhatsApp Us</a>
-<a href="https://instagram.com/zamzam_vintage_" class="instagram">Follow Us</a>
-</section>
-
-<footer>
-© 2026 Urban Loops | Zamzam Vintage
-</footer>
+<script>
+function openMenu(){
+document.getElementById("menu").classList.add("active");
+}
+function closeMenu(){
+document.getElementById("menu").classList.remove("active");
+}
+</script>
 
 </body>
 </html>
