@@ -1,152 +1,268 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Urban Loops</title>
+<title>Urban Loops | Premium Streetwear</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#000;
-color:#111;
+  background:#fff;
+  color:#111;
 }
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-background:#000;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 20px;
-z-index:1000;
-border-bottom:1px solid #222;
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#000;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:999;
 }
 
 .logo{
-display:flex;
-align-items:center;
-color:#fff;
-font-weight:bold;
-font-size:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  font-weight:600;
+  font-size:18px;
 }
 
 .logo-box{
-border:2px solid #fff;
-padding:6px 10px;
-margin-right:10px;
-border-radius:6px;
+  border:2px solid #fff;
+  padding:4px 8px;
+  font-weight:800;
 }
 
-.menu-icon{
-font-size:26px;
-color:#fff;
-cursor:pointer;
+.menu-btn{
+  font-size:24px;
+  color:#fff;
+  cursor:pointer;
 }
 
-/* ===== HERO ===== */
+.menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:70%;
+  height:100%;
+  background:#000;
+  color:#fff;
+  padding:80px 30px;
+  transition:0.4s;
+}
+
+.menu a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  margin:20px 0;
+  font-size:18px;
+}
+
+.menu.active{
+  right:0;
+}
+
+/* ================= HERO ================= */
 
 .hero{
-height:100vh;
-background:
-linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-url("F9BD87AC-F763-48E7-B37F-52C197C7F657.png");
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-padding:20px;
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,30,0.8)),
+  url('EA5CE40E-81E9-4405-919E-E2A0A9394AC4.jpeg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  padding:20px;
 }
 
-.hero h1{
-font-size:48px;
-letter-spacing:2px;
-margin-bottom:20px;
+.hero-content h1{
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:2px;
 }
 
-.hero h2{
-color:#4da3ff;
-margin-bottom:20px;
+.hero-content h2{
+  color:#3d8bfd;
+  margin:15px 0;
+  font-size:20px;
+  letter-spacing:1px;
 }
 
-.hero p{
-max-width:500px;
-margin-bottom:30px;
-color:#ccc;
+.hero-content p{
+  max-width:500px;
+  margin:auto;
+  opacity:0.9;
 }
 
-.btn{
-background:#fff;
-color:#000;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
+.hero-btn{
+  margin-top:25px;
+  display:inline-block;
+  background:#fff;
+  color:#000;
+  padding:14px 28px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
 }
 
-/* ===== COLLECTION SECTION ===== */
+/* ================= COLLECTION ================= */
 
 .collection{
-background:#fff;
-padding:70px 20px;
-text-align:center;
+  padding:60px 20px;
+  text-align:center;
 }
 
 .collection h2{
-font-size:32px;
-margin-bottom:30px;
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.tabs{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:30px 0;
+}
+
+.tabs button{
+  padding:10px 20px;
+  border:none;
+  background:#eee;
+  cursor:pointer;
+  border-radius:30px;
+}
+
+.tabs button.active{
+  background:#000;
+  color:#fff;
 }
 
 .product-card{
-background:#000;
-color:#fff;
-border-radius:20px;
-padding:20px;
-margin-bottom:40px;
-max-width:400px;
-margin-left:auto;
-margin-right:auto;
+  max-width:350px;
+  margin:20px auto;
+  background:#fff;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  overflow:hidden;
 }
 
 .product-card img{
-width:100%;
-border-radius:15px;
-margin-bottom:15px;
+  width:100%;
 }
 
-.product-card h3{
-margin-bottom:10px;
-}
-
-.price{
-margin-bottom:15px;
-color:#ccc;
+.product-info{
+  padding:15px;
 }
 
 .whatsapp-btn{
-background:#25D366;
-color:#fff;
-padding:12px 20px;
-border-radius:25px;
-text-decoration:none;
-display:inline-block;
-font-weight:bold;
+  display:block;
+  margin-top:10px;
+  background:#25D366;
+  color:#fff;
+  padding:10px;
+  border-radius:30px;
+  text-decoration:none;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  padding:60px 20px;
+  background:#f7f7f7;
+  text-align:center;
+}
+
+.about h2{
+  font-size:30px;
+  margin-bottom:30px;
+}
+
+.feature{
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  margin:20px auto;
+  max-width:400px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  background:#000;
+  color:#fff;
+  padding:50px 20px;
+  text-align:center;
+}
+
+.cta-btn{
+  margin-top:20px;
+  display:inline-block;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.cta-btn.white{
+  background:#fff;
+  color:#000;
+}
+
+.cta-btn.border{
+  border:2px solid #fff;
+  color:#fff;
+  margin-left:10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#000;
+  color:#fff;
+  padding:40px 20px;
+}
+
+footer h3{
+  margin-bottom:10px;
+}
+
+footer p{
+  opacity:0.8;
+  margin:5px 0;
+}
+
+footer hr{
+  margin:20px 0;
+  border:0.5px solid #444;
+}
+
+.copy{
+  text-align:center;
+  font-size:14px;
+  opacity:0.6;
 }
 
 </style>
@@ -155,38 +271,105 @@ font-weight:bold;
 <body>
 
 <!-- NAVBAR -->
-<div class="navbar">
-<div class="logo">
-<div class="logo-box">UL</div>
-Urban Loops
-</div>
-<div class="menu-icon">&#9776;</div>
+<nav>
+  <div class="logo">
+    <div class="logo-box">UL</div>
+    Urban Loops
+  </div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="menu" id="menu">
+  <a href="#collection">Products</a>
+  <a href="#about">About</a>
+  <a href="https://instagram.com/zamzam_vintage_" target="_blank">Instagram</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-<h1>URBAN LOOPS</h1>
-<h2>PREMIUM STREETWEAR DENIM</h2>
-<p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
-<a href="#collection" class="btn">SHOP COLLECTION ↓</a>
+  <div class="hero-content">
+    <h1>URBAN<br>LOOPS</h1>
+    <h2>PREMIUM STREETWEAR DENIM</h2>
+    <p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
+    <a href="#collection" class="hero-btn">SHOP COLLECTION ↓</a>
+  </div>
 </section>
 
 <!-- COLLECTION -->
-<section id="collection" class="collection">
+<section class="collection" id="collection">
+  <h2>OUR COLLECTION</h2>
 
-<h2>OUR COLLECTION</h2>
+  <div class="tabs">
+    <button class="active">All Products</button>
+    <button>Baggy Hip Hop Embroidery Jeans</button>
+    <button>Y2K Collection</button>
+    <button>Custom Embroidery Jeans Order</button>
+  </div>
 
-<div class="product-card">
-<img src="IMG_2553.png">
-<h3>Baggy Jeans 01</h3>
-<div class="price">£13 Per Piece | Min Order 25</div>
-<a class="whatsapp-btn" 
-href="https://wa.me/447561587249?text=Hi I want Baggy Jeans 01">
-Order on WhatsApp
-</a>
-</div>
-
+  <div class="product-card">
+    <img src="IMG_1793.jpeg">
+    <div class="product-info">
+      <h3>Baggy Jeans Bundle</h3>
+      <p>£13 Per Piece | Min Order 25</p>
+      <a class="whatsapp-btn" href="https://wa.me/447561587249">Order on WhatsApp</a>
+    </div>
+  </div>
 </section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2>ABOUT URBAN LOOPS</h2>
+
+  <div class="feature">
+    <h3>Premium Quality</h3>
+    <p>Hand-picked premium denim with authentic streetwear fit and finish</p>
+  </div>
+
+  <div class="feature">
+    <h3>Worldwide Shipping</h3>
+    <p>We accept bulk and retail orders with shipping worldwide</p>
+  </div>
+
+  <div class="feature">
+    <h3>Easy Ordering</h3>
+    <p>Direct orders through WhatsApp for quick and easy purchase</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>READY TO ORDER?</h2>
+  <p>Contact us directly via WhatsApp or follow us on Instagram</p>
+  <a href="https://wa.me/447561587249" class="cta-btn white">WHATSAPP US</a>
+  <a href="https://instagram.com/zamzam_vintage_" target="_blank" class="cta-btn border">FOLLOW US</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h3>URBAN LOOPS</h3>
+  <p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
+
+  <h3 style="margin-top:25px;">Quick Links</h3>
+  <p>Products</p>
+  <p>About Us</p>
+  <p>Instagram</p>
+
+  <h3 style="margin-top:25px;">Contact</h3>
+  <p>+44 7561 587249</p>
+  <p>@zamzam_vintage_</p>
+
+  <hr>
+
+  <div class="copy">
+    © 2026 Urban Loops. All rights reserved.
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
