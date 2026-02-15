@@ -4,319 +4,116 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Urban Loops</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{background:#f3f3f3;color:#111;}
-
-/* HEADER */
-header{
-position:fixed;
-top:0;
-width:100%;
-background:#000;
-color:#fff;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-z-index:1000;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:600;
-font-size:18px;
-}
-
-.logo-box{
-border:2px solid #fff;
-padding:5px 8px;
-font-weight:800;
-}
-
-.menu-btn{
-font-size:26px;
-cursor:pointer;
-}
-
-/* SIDE MENU */
-.side-menu{
-position:fixed;
-top:0;
-right:-100%;
-width:75%;
-height:100%;
-background:#000;
-color:#fff;
-padding:80px 30px;
-transition:.4s;
-z-index:999;
-}
-
-.side-menu.active{
-right:0;
-}
-
-.side-menu a{
-display:block;
-color:#fff;
-text-decoration:none;
-margin:20px 0;
-font-size:20px;
-}
-
-/* HERO */
-.hero{
-height:100vh;
-background:url('EA5CE40E-81E9-4405-919E-E2A0A9394AC4.jpeg') center/cover no-repeat;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-padding:20px;
-position:relative;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;left:0;
-width:100%;height:100%;
-background:linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.6));
-}
-
-.hero-content{
-position:relative;
-z-index:1;
-}
-
-.hero h1{
-font-size:48px;
-font-weight:800;
-}
-
-.hero h1 span{
-display:block;
-}
-
-.hero h3{
-color:#4da6ff;
-margin:15px 0;
-}
-
-.hero p{
-max-width:350px;
-margin:auto;
-opacity:.9;
-}
-
-.btn{
-margin-top:25px;
-padding:15px 35px;
-border-radius:40px;
-border:none;
-font-weight:600;
-cursor:pointer;
-}
-
-.btn-primary{
-background:#fff;
-}
-
-/* COLLECTION */
-.section{
-padding:80px 20px;
-text-align:center;
-}
-
-.section h2{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.categories{
-display:flex;
-overflow-x:auto;
-gap:15px;
-margin:20px 0;
-padding-bottom:10px;
-}
-
-.categories button{
-padding:10px 20px;
-border-radius:30px;
-border:none;
-background:#ddd;
-cursor:pointer;
-white-space:nowrap;
-font-weight:500;
-}
-
-.categories button.active{
-background:#000;
-color:#fff;
-}
-
-.product-card{
-background:#fff;
-border-radius:20px;
-padding:15px;
-margin-top:20px;
-}
-
-.product-card img{
-width:100%;
-border-radius:15px;
-}
-
-.product-card h3{
-margin:15px 0 5px;
-}
-
-/* READY */
-.ready{
-background:#000;
-color:#fff;
-padding:50px 20px;
-border-radius:20px;
-margin:60px 20px;
-text-align:center;
-}
-
-.ready h2{
-margin-bottom:10px;
-}
-
-.ready .btn{
-margin:10px;
-}
-
-.btn-outline{
-background:transparent;
-border:2px solid #fff;
-color:#fff;
-}
-
-/* FOOTER */
-footer{
-background:#000;
-color:#fff;
-padding:40px 20px;
-}
-
-footer h3{
-margin-bottom:10px;
-}
-
-footer a{
-color:#ccc;
-display:block;
-margin:5px 0;
-text-decoration:none;
-}
-</style>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
+<header class="navbar">
 <div class="logo">
 <div class="logo-box">UL</div>
-Urban Loops
+<span>Urban Loops</span>
 </div>
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
 </header>
 
-<div class="side-menu" id="menu">
+<!-- SLIDE MENU -->
+<div id="sideMenu" class="side-menu">
+<a href="#" onclick="closeMenu()">✕</a>
 <a href="#collection" onclick="closeMenu()">Products</a>
 <a href="#about" onclick="closeMenu()">About</a>
-<a href="https://instagram.com/zamzam_vintage_" target="_blank" onclick="closeMenu()">Instagram</a>
+<a href="https://instagram.com/" target="_blank" onclick="closeMenu()">Instagram</a>
 </div>
 
+<!-- HERO SECTION -->
 <section class="hero">
 <div class="hero-content">
-<h1><span>URBAN</span><span>LOOPS</span></h1>
+<h1>URBAN<br>LOOPS</h1>
 <h3>PREMIUM STREETWEAR DENIM</h3>
 <p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
-<button class="btn btn-primary" onclick="scrollToCollection()">SHOP COLLECTION ↓</button>
+<a href="#collection" class="primary-btn">SHOP COLLECTION ↓</a>
 </div>
 </section>
 
-<section class="section" id="collection">
+<!-- COLLECTION -->
+<section id="collection" class="collection-section">
+
 <h2>OUR COLLECTION</h2>
 
-<div class="categories">
-<button class="active" onclick="filterProducts('all',this)">All Products</button>
-<button onclick="filterProducts('baggy',this)">Baggy Hip Hop Embroidery Jeans</button>
-<button onclick="filterProducts('y2k',this)">Y2K Collection</button>
-<button onclick="filterProducts('custom',this)">Custom Embroidery Jeans Order</button>
+<div class="category-tabs">
+<button class="active">All Products</button>
+<button>Baggy Hip Hop Embroidery Jeans</button>
+<button>Y2K Collection</button>
+<button>Custom Embroidery Jeans Order</button>
 </div>
 
-<div class="product-card" data-category="baggy">
-<img src="IMG_3021.jpeg">
+<div class="product-card">
+<img src="IMG_3021.jpeg" alt="Baggy Bundle">
 <h3>Baggy Jeans Bundle</h3>
 <p>£13 Per Piece | Min Order 25</p>
+<a href="https://wa.me/447561587249" class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
 </div>
 
 </section>
 
-<section class="ready">
-<h2>READY TO ORDER?</h2>
-<p>Contact us directly via WhatsApp or follow us on Instagram</p>
-<button class="btn btn-primary" onclick="window.open('https://wa.me/447561587249')">WHATSAPP US</button>
-<button class="btn btn-outline" onclick="window.open('https://instagram.com/zamzam_vintage_')">FOLLOW US</button>
+<!-- ABOUT -->
+<section id="about" class="about-section">
+
+<h2>ABOUT URBAN LOOPS</h2>
+<p>Premium streetwear denim for the modern urban lifestyle</p>
+
+<div class="features">
+<div class="feature-box">
+<div class="icon-circle">📦</div>
+<h4>PREMIUM QUALITY</h4>
+<p>Hand-picked premium denim with authentic streetwear fit and finish</p>
+</div>
+
+<div class="feature-box">
+<div class="icon-circle">🌍</div>
+<h4>WORLDWIDE SHIPPING</h4>
+<p>We accept bulk and retail orders with shipping worldwide</p>
+</div>
+
+<div class="feature-box">
+<div class="icon-circle">💬</div>
+<h4>EASY ORDERING</h4>
+<p>Direct orders through WhatsApp for quick and easy purchase</p>
+</div>
+</div>
+
 </section>
 
-<footer id="about">
+<!-- READY TO ORDER -->
+<section class="cta-section">
+<h2>READY TO ORDER?</h2>
+<p>Contact us directly via WhatsApp or follow us on Instagram</p>
+
+<a href="https://wa.me/447561587249" target="_blank" class="primary-btn">WHATSAPP US</a>
+<a href="https://instagram.com/" target="_blank" class="outline-btn">FOLLOW US</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
 <h3>URBAN LOOPS</h3>
 <p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
 
-<h3 style="margin-top:20px;">Quick Links</h3>
+<div class="footer-links">
 <a href="#collection">Products</a>
 <a href="#about">About Us</a>
-<a href="https://instagram.com/zamzam_vintage_" target="_blank">Instagram</a>
+<a href="https://instagram.com/" target="_blank">Instagram</a>
+</div>
 
-<h3 style="margin-top:20px;">Contact</h3>
-<p>+447561587249</p>
-<p>@zamzam_vintage_</p>
-
-<p style="margin-top:20px;font-size:14px;color:#aaa;">
-© 2026 Urban Loops. All rights reserved.
-</p>
+<p class="copyright">© 2026 Urban Loops. All rights reserved.</p>
 </footer>
 
 <script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
+function toggleMenu() {
+document.getElementById("sideMenu").classList.toggle("active");
 }
-
-function closeMenu(){
-document.getElementById("menu").classList.remove("active");
-}
-
-function scrollToCollection(){
-document.getElementById("collection").scrollIntoView({behavior:"smooth"});
-}
-
-function filterProducts(category,btn){
-let buttons=document.querySelectorAll(".categories button");
-buttons.forEach(b=>b.classList.remove("active"));
-btn.classList.add("active");
-
-let products=document.querySelectorAll(".product-card");
-products.forEach(p=>{
-if(category==="all"||p.dataset.category===category){
-p.style.display="block";
-}else{
-p.style.display="none";
-}
-});
+function closeMenu() {
+document.getElementById("sideMenu").classList.remove("active");
 }
 </script>
 
