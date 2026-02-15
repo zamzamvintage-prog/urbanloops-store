@@ -1,32 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Urban Loops | Premium Streetwear</title>
+  <title>Urban Loops | Premium Wholesale Denim</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>.product img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
 
-.product {
-  background: #1a1a1a;
-  padding: 15px;
-  border-radius: 15px;
-  transition: 0.3s ease;
-}
-
-.product:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-.price {
-  margin: 10px 0;
-  font-size: 14px;
-  color: #bbbbbb;
-}
+  <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -46,55 +24,87 @@
     .hero {
       text-align: center;
       padding: 60px 20px;
-      background: linear-gradient(to bottom, #111, #000);
+      background: linear-gradient(to bottom, #000000, #111111);
     }
 
     .hero h1 {
       font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      color: #aaa;
+      color: #bbbbbb;
+      font-size: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 15px;
+      background: #ff3c3c;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 15px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
     }
 
     .product {
       background: #1a1a1a;
       padding: 15px;
+      border-radius: 15px;
       text-align: center;
-      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
 
     .product img {
       width: 100%;
-      border-radius: 6px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 15px 0 10px;
+    }
+
+    .price {
+      font-size: 14px;
+      color: #bbbbbb;
+      margin-bottom: 15px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
+      padding: 10px 20px;
       background: #25D366;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      font-size: 14px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #1ebe5d;
     }
 
     .instagram {
       text-align: center;
-      padding: 30px;
+      padding: 40px 20px;
     }
 
     .instagram a {
-      color: #25D366;
+      color: #1ebe5d;
       text-decoration: none;
       font-size: 18px;
     }
@@ -117,9 +127,11 @@
 
 <section class="hero">
   <h1>Premium Streetwear Denim</h1>
-  <p>Wholesale Only – £13 Per Piece
-Minimum Order: 25 Pieces
-Shipping Included Worldwide</p>
+  <p>Wholesale Only – £13 Per Piece<br>
+  Minimum Order: 25 Pieces<br>
+  Shipping Included Worldwide</p>
+
+  <div class="badge">WHOLESALE ONLY</div>
 </section>
 
 <section class="products">
@@ -127,19 +139,22 @@ Shipping Included Worldwide</p>
   <div class="product">
     <img src="IMG_2553.png">
     <h3>Baggy Jeans 01</h3>
-    <a class="btn" href="https://wa.me/447561587249">Order on WhatsApp</a>
+    <p class="price">£13 Per Piece | Min Order: 25 | Shipping Included</p>
+    <a class="btn" href="https://wa.me/447561410983">Order on WhatsApp</a>
   </div>
 
   <div class="product">
-   <img src="IMG_2108.png">
+    <img src="IMG_2108.png">
     <h3>Baggy Jeans 02</h3>
-    <a class="btn" href="https://wa.me/447561587249">Order on WhatsApp</a>
+    <p class="price">£13 Per Piece | Min Order: 25 | Shipping Included</p>
+    <a class="btn" href="https://wa.me/447561410983">Order on WhatsApp</a>
   </div>
 
   <div class="product">
-   <img src="IMG_1793.jpeg">
+    <img src="IMG_1793.jpeg">
     <h3>Embroidered Denim 01</h3>
-    <a class="btn" href="https://wa.me/447561587249">Order on WhatsApp</a>
+    <p class="price">£13 Per Piece | Min Order: 25 | Shipping Included</p>
+    <a class="btn" href="https://wa.me/447561410983">Order on WhatsApp</a>
   </div>
 
 </section>
