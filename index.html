@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Urban Loops | Premium Wholesale Denim</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urban Loops | Premium Streetwear Denim</title>
 
 <style>
 body {
@@ -12,98 +13,127 @@ body {
   color: white;
 }
 
+/* HEADER */
 header {
   background: black;
-  padding: 25px;
+  padding: 20px;
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
+/* HERO */
 .hero {
   text-align: center;
-  padding: 70px 20px;
+  padding: 80px 20px;
   background: linear-gradient(to bottom, #000000, #111111);
 }
 
 .hero h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 42px;
+  margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 18px;
-  color: #bbbbbb;
-  margin: 8px 0;
+  color: #cccccc;
+  margin-bottom: 25px;
 }
 
-.wholesale-badge {
-  margin-top: 25px;
-  display: inline-block;
-  background: #ff3b3b;
-  padding: 12px 25px;
+.hero-btn {
+  background: white;
+  color: black;
+  padding: 15px 30px;
   border-radius: 30px;
+  text-decoration: none;
   font-weight: bold;
 }
 
+/* PRODUCTS */
 .products {
+  padding: 60px 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
-  padding: 50px 20px;
 }
 
 .product {
   background: #1a1a1a;
   border-radius: 15px;
-  padding: 20px;
-  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
 }
 
 .product img {
   width: 100%;
-  border-radius: 12px;
+  height: 350px;
+  object-fit: cover;
 }
 
-.product h3 {
-  margin-top: 15px;
-  font-size: 22px;
+.product-info {
+  padding: 20px;
+}
+
+.product-info h3 {
+  margin: 0 0 10px 0;
 }
 
 .price {
-  color: #bbbbbb;
-  margin: 10px 0;
+  color: #aaaaaa;
+  margin-bottom: 15px;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
   background: #25D366;
   color: white;
-  text-decoration: none;
+  padding: 12px 20px;
   border-radius: 8px;
+  text-decoration: none;
   font-weight: bold;
 }
 
-.instagram {
+/* CTA SECTION */
+.cta {
+  background: black;
   text-align: center;
-  padding: 40px 20px;
-  background: #111;
+  padding: 60px 20px;
 }
 
-.instagram a {
-  color: #25D366;
-  font-size: 20px;
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cta a {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 30px;
+  border-radius: 30px;
   text-decoration: none;
+  font-weight: bold;
 }
 
+.whatsapp-btn {
+  background: white;
+  color: black;
+}
+
+.instagram-btn {
+  border: 2px solid white;
+  color: white;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
-  background: black;
-  font-size: 14px;
+  padding: 30px;
+  background: #111;
   color: #777;
 }
 </style>
@@ -117,46 +147,52 @@ URBAN LOOPS
 
 <section class="hero">
 <h1>Premium Streetwear Denim</h1>
-<p>Wholesale Only – £13 Per Piece</p>
-<p>Minimum Order: 25 Pieces</p>
-<p>Shipping Included Worldwide</p>
-<div class="wholesale-badge">WHOLESALE ONLY</div>
+<p>Wholesale Only – £13 Per Piece | Minimum Order: 25 Pieces | Shipping Included Worldwide</p>
+<a href="#products" class="hero-btn">SHOP COLLECTION</a>
 </section>
 
-<section class="products">
+<section id="products" class="products">
 
+<!-- PRODUCT 1 -->
 <div class="product">
 <img src="IMG_2553.png">
+<div class="product-info">
 <h3>Baggy Jeans 01</h3>
-<div class="price">£13 Per Piece | Min 25 | Shipping Included</div>
-<a class="btn" href="https://wa.me/447561587249?text=Hi%20I%20want%20Baggy%20Jeans%2001">Order on WhatsApp</a>
+<div class="price">£13 Per Piece | Min Order: 25</div>
+<a class="btn" href="https://wa.me/447561587249?text=Hi%20I%20want%20Baggy%20Jeans%2001%20-%2025%20Pieces">Order on WhatsApp</a>
+</div>
 </div>
 
+<!-- PRODUCT 2 -->
 <div class="product">
 <img src="IMG_2108.png">
+<div class="product-info">
 <h3>Baggy Jeans 02</h3>
-<div class="price">£13 Per Piece | Min 25 | Shipping Included</div>
-<a class="btn" href="https://wa.me/447561587249?text=Hi%20I%20want%20Baggy%20Jeans%2002">Order on WhatsApp</a>
+<div class="price">£13 Per Piece | Min Order: 25</div>
+<a class="btn" href="https://wa.me/447561587249?text=Hi%20I%20want%20Baggy%20Jeans%2002%20-%2025%20Pieces">Order on WhatsApp</a>
+</div>
 </div>
 
+<!-- PRODUCT 3 -->
 <div class="product">
 <img src="IMG_1793.jpeg">
+<div class="product-info">
 <h3>Embroidered Denim 01</h3>
-<div class="price">£13 Per Piece | Min 25 | Shipping Included</div>
-<a class="btn" href="https://wa.me/447561587249?text=Hi%20I%20want%20Embroidered%20Denim%2001">Order on WhatsApp</a>
+<div class="price">£13 Per Piece | Min Order: 25</div>
+<a class="btn" href="https://wa.me/447561587249?text=Hi%20I%20want%20Embroidered%20Denim%2001%20-%2025%20Pieces">Order on WhatsApp</a>
+</div>
 </div>
 
 </section>
 
-<section class="instagram">
-<p>Follow us on Instagram:</p>
-<a href="https://instagram.com/zamzam_vintage_" target="_blank">
-@zamzam_vintage_
-</a>
+<section class="cta">
+<h2>Ready To Order?</h2>
+<a href="https://wa.me/447561587249" class="whatsapp-btn">WHATSAPP US</a>
+<a href="https://instagram.com/zamzam_vintage_" class="instagram-btn">FOLLOW US</a>
 </section>
 
 <footer>
-© 2026 Urban Loops | Zamzam Vintage
+© 2026 Urban Loops | Zamzam Vintage | Premium Wholesale Denim
 </footer>
 
 </body>
