@@ -5,116 +5,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Urban Loops</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="navbar">
-<div class="logo">
-<div class="logo-box">UL</div>
-<span>Urban Loops</span>
-</div>
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo-box">UL</div>
+  <div class="logo-text">Urban Loops</div>
+  <div class="menu-icon" onclick="openMenu()">☰</div>
 </header>
 
-<!-- SLIDE MENU -->
-<div id="sideMenu" class="side-menu">
-<a href="#" onclick="closeMenu()">✕</a>
-<a href="#collection" onclick="closeMenu()">Products</a>
-<a href="#about" onclick="closeMenu()">About</a>
-<a href="https://instagram.com/" target="_blank" onclick="closeMenu()">Instagram</a>
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+  <div class="close-btn" onclick="closeMenu()">✕</div>
+  <a href="#collection" onclick="closeMenu()">Products</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="https://instagram.com/zamzam_vintage_" target="_blank">Instagram</a>
 </div>
 
 <!-- HERO SECTION -->
 <section class="hero">
-<div class="hero-content">
-<h1>URBAN<br>LOOPS</h1>
-<h3>PREMIUM STREETWEAR DENIM</h3>
-<p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
-<a href="#collection" class="primary-btn">SHOP COLLECTION ↓</a>
-</div>
+  <div class="hero-content">
+    <h1>URBAN<br>LOOPS</h1>
+    <h3>PREMIUM STREETWEAR DENIM</h3>
+    <p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
+    <a href="#collection" class="shop-btn">SHOP COLLECTION ↓</a>
+  </div>
 </section>
 
 <!-- COLLECTION -->
-<section id="collection" class="collection-section">
+<section id="collection" class="collection">
+  <h2>OUR COLLECTION</h2>
 
-<h2>OUR COLLECTION</h2>
+  <div class="filters">
+    <button class="filter-btn active" data-category="all">All Products</button>
+    <button class="filter-btn" data-category="baggy">Baggy Hip Hop Embroidery Jeans</button>
+    <button class="filter-btn" data-category="y2k">Y2K Collection</button>
+    <button class="filter-btn" data-category="custom">Custom Embroidery Jeans Order</button>
+  </div>
 
-<div class="category-tabs">
-<button class="active">All Products</button>
-<button>Baggy Hip Hop Embroidery Jeans</button>
-<button>Y2K Collection</button>
-<button>Custom Embroidery Jeans Order</button>
-</div>
+  <div class="products">
 
-<div class="product-card">
-<img src="IMG_3021.jpeg" alt="Baggy Bundle">
-<h3>Baggy Jeans Bundle</h3>
-<p>£13 Per Piece | Min Order 25</p>
-<a href="https://wa.me/447561587249" class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
-</div>
+    <div class="product-card baggy">
+      <img src="IMG_3021.jpeg">
+      <h3>Baggy Jeans Bundle</h3>
+      <p>£13 Per Piece | Min Order 25</p>
+      <a href="https://wa.me/447561587249" target="_blank" class="order-btn">Order on WhatsApp</a>
+    </div>
 
-</section>
+    <div class="product-card y2k">
+      <img src="IMG_2108.png">
+      <h3>Y2K Collection</h3>
+      <p>Premium Y2K Embroidery</p>
+      <a href="https://wa.me/447561587249" target="_blank" class="order-btn">Order on WhatsApp</a>
+    </div>
 
-<!-- ABOUT -->
-<section id="about" class="about-section">
+    <div class="product-card custom">
+      <img src="IMG_2553.png">
+      <h3>Custom Embroidery Order</h3>
+      <p>Send your design & quantity</p>
+      <a href="https://wa.me/447561587249" target="_blank" class="order-btn">Request Custom Order</a>
+    </div>
 
-<h2>ABOUT URBAN LOOPS</h2>
-<p>Premium streetwear denim for the modern urban lifestyle</p>
-
-<div class="features">
-<div class="feature-box">
-<div class="icon-circle">📦</div>
-<h4>PREMIUM QUALITY</h4>
-<p>Hand-picked premium denim with authentic streetwear fit and finish</p>
-</div>
-
-<div class="feature-box">
-<div class="icon-circle">🌍</div>
-<h4>WORLDWIDE SHIPPING</h4>
-<p>We accept bulk and retail orders with shipping worldwide</p>
-</div>
-
-<div class="feature-box">
-<div class="icon-circle">💬</div>
-<h4>EASY ORDERING</h4>
-<p>Direct orders through WhatsApp for quick and easy purchase</p>
-</div>
-</div>
-
+  </div>
 </section>
 
 <!-- READY TO ORDER -->
-<section class="cta-section">
-<h2>READY TO ORDER?</h2>
-<p>Contact us directly via WhatsApp or follow us on Instagram</p>
-
-<a href="https://wa.me/447561587249" target="_blank" class="primary-btn">WHATSAPP US</a>
-<a href="https://instagram.com/" target="_blank" class="outline-btn">FOLLOW US</a>
+<section class="ready">
+  <h2>READY TO ORDER?</h2>
+  <p>Contact us directly via WhatsApp or follow us on Instagram</p>
+  <a href="https://wa.me/447561587249" target="_blank" class="whatsapp-btn">WHATSAPP US</a>
+  <a href="https://instagram.com/zamzam_vintage_" target="_blank" class="follow-btn">FOLLOW US</a>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-<h3>URBAN LOOPS</h3>
-<p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
+  <h3>URBAN LOOPS</h3>
+  <p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
 
-<div class="footer-links">
-<a href="#collection">Products</a>
-<a href="#about">About Us</a>
-<a href="https://instagram.com/" target="_blank">Instagram</a>
-</div>
+  <div class="footer-links">
+    <a href="#collection">Products</a>
+    <a href="#about">About</a>
+    <a href="https://instagram.com/zamzam_vintage_" target="_blank">Instagram</a>
+  </div>
 
-<p class="copyright">© 2026 Urban Loops. All rights reserved.</p>
+  <p class="copyright">
+    © 2026 Urban Loops. All rights reserved.
+  </p>
 </footer>
 
 <script>
-function toggleMenu() {
-document.getElementById("sideMenu").classList.toggle("active");
+function openMenu(){
+  document.getElementById("sidebar").style.left = "0";
 }
-function closeMenu() {
-document.getElementById("sideMenu").classList.remove("active");
+function closeMenu(){
+  document.getElementById("sidebar").style.left = "-100%";
 }
+
+const tabs = document.querySelectorAll(".filter-btn");
+const products = document.querySelectorAll(".product-card");
+
+tabs.forEach(tab=>{
+  tab.addEventListener("click",()=>{
+    tabs.forEach(btn=>btn.classList.remove("active"));
+    tab.classList.add("active");
+
+    const category = tab.dataset.category;
+
+    products.forEach(product=>{
+      if(category==="all"){
+        product.style.display="block";
+      }else{
+        product.style.display=product.classList.contains(category)?"block":"none";
+      }
+    });
+  });
+});
 </script>
 
 </body>
