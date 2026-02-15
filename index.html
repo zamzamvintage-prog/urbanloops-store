@@ -5,22 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Urban Loops | Premium Streetwear</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#000;color:#fff;overflow-x:hidden}
 
-body{
-background:#000;
-color:#fff;
-}
-
+/* HEADER */
 header{
 position:fixed;
 top:0;
@@ -29,10 +20,10 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 25px;
+padding:18px 24px;
 background:#000;
 z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.1);
+border-bottom:1px solid rgba(255,255,255,0.1)
 }
 
 .logo{
@@ -40,191 +31,169 @@ display:flex;
 align-items:center;
 gap:10px;
 font-weight:600;
-font-size:18px;
+font-size:20px
 }
 
 .logo-box{
-width:32px;
-height:32px;
 border:2px solid #fff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:700;
+padding:4px 8px;
 border-radius:6px;
+font-weight:700
 }
 
-.menu-icon{
+.menu-btn{
 font-size:28px;
-cursor:pointer;
+cursor:pointer
 }
 
-.menu{
+/* SIDE MENU */
+.side-menu{
 position:fixed;
 top:0;
 right:-100%;
-width:70%;
+width:75%;
 height:100%;
-background:#111;
-padding:80px 30px;
+background:#000;
+padding:40px;
 transition:0.4s;
+z-index:2000
 }
 
-.menu a{
+.side-menu a{
 display:block;
+margin:20px 0;
 color:#fff;
 text-decoration:none;
-margin-bottom:25px;
-font-size:18px;
+font-size:18px
 }
 
-.menu.active{
-right:0;
-}
+.side-menu.active{right:0}
 
+/* HERO */
 .hero{
 height:100vh;
-background:url('IMG_3021.jpeg') center/cover no-repeat;
+background:url('F9BD87AC-F763-48E7-B37F.png') center/cover no-repeat;
 display:flex;
-align-items:center;
+flex-direction:column;
 justify-content:center;
+align-items:center;
 text-align:center;
-position:relative;
 padding:20px;
+position:relative
 }
 
 .hero::after{
 content:'';
 position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
+inset:0;
+background:rgba(0,0,0,0.6)
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:700px;
+max-width:800px
 }
 
 .hero h1{
-font-size:48px;
+font-size:60px;
 font-weight:800;
-margin-bottom:10px;
+letter-spacing:2px
 }
 
 .hero h2{
-color:#4ea1ff;
-margin-bottom:15px;
+color:#4da3ff;
+margin:20px 0;
 font-weight:600;
+letter-spacing:1px
 }
 
 .hero p{
-color:#ccc;
-margin-bottom:25px;
+opacity:0.8;
+margin-bottom:30px;
+line-height:1.6
 }
 
 .btn{
 display:inline-block;
-padding:14px 30px;
 background:#fff;
 color:#000;
+padding:16px 40px;
 border-radius:40px;
 text-decoration:none;
 font-weight:600;
-transition:0.3s;
+transition:0.3s
 }
 
 .btn:hover{
-background:#4ea1ff;
-color:#fff;
+background:#ddd
 }
 
+/* COLLECTION */
 .section{
-padding:80px 25px;
-text-align:center;
+padding:100px 20px;
+text-align:center
 }
 
 .section h2{
-font-size:32px;
-margin-bottom:20px;
+font-size:40px;
+margin-bottom:20px
 }
 
 .products{
 display:grid;
-grid-template-columns:1fr;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-margin-top:40px;
+margin-top:40px
 }
 
-.product{
+.card{
 background:#111;
-border-radius:12px;
+border-radius:20px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
+transition:0.3s
 }
 
-.product img{
+.card img{
 width:100%;
-display:block;
+display:block
 }
 
-.product-content{
-padding:20px;
-}
-
-.product h3{
-margin-bottom:10px;
+.card-content{
+padding:20px
 }
 
 .price{
-color:#4ea1ff;
-margin-bottom:15px;
+margin:10px 0;
+font-weight:600
 }
 
 .whatsapp-btn{
-display:block;
-padding:12px;
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
 background:#25D366;
 color:#fff;
+border-radius:30px;
 text-decoration:none;
-border-radius:6px;
-font-weight:600;
+font-size:14px
 }
 
-.about-box{
-background:#111;
-padding:30px;
-border-radius:12px;
-margin-top:20px;
-}
-
-.cta{
-background:#111;
-padding:50px 25px;
-border-radius:15px;
-margin-top:40px;
-}
-
-.cta h2{
-margin-bottom:15px;
-}
-
-.footer{
-padding:40px 25px;
+/* FOOTER */
+footer{
+padding:60px 20px;
 background:#000;
-border-top:1px solid rgba(255,255,255,0.1);
 text-align:center;
-color:#aaa;
+border-top:1px solid rgba(255,255,255,0.1)
 }
 
-@media(min-width:768px){
-.products{
-grid-template-columns:repeat(3,1fr);
+footer a{
+color:#fff;
+text-decoration:none;
+display:block;
+margin:10px 0
 }
-}
+
 </style>
 </head>
 
@@ -235,13 +204,13 @@ grid-template-columns:repeat(3,1fr);
 <div class="logo-box">UL</div>
 Urban Loops
 </div>
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
-<div class="menu" id="menu">
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="https://instagram.com/zamzam_vintage_" target="_blank">Instagram</a>
+<div class="side-menu" id="menu">
+<a href="#">Products</a>
+<a href="#">About</a>
+<a href="https://instagram.com/zamzam__vintage__">Instagram</a>
 </div>
 
 <section class="hero">
@@ -249,68 +218,55 @@ Urban Loops
 <h1>URBAN LOOPS</h1>
 <h2>PREMIUM STREETWEAR DENIM</h2>
 <p>Authentic baggy hip-hop jeans and embroidered denim for the modern urban lifestyle</p>
-<a href="#products" class="btn">SHOP COLLECTION ↓</a>
+<a href="#collection" class="btn">SHOP COLLECTION ↓</a>
 </div>
 </section>
 
-<section class="section" id="products">
+<section class="section" id="collection">
 <h2>OUR COLLECTION</h2>
 
 <div class="products">
 
-<div class="product">
-<img src="IMG_2553.png">
-<div class="product-content">
-<h3>Baggy Jeans 01</h3>
-<p class="price">£13 Per Piece | Min Order: 25</p>
-<a class="whatsapp-btn" href="https://wa.me/447561587249?text=Hi%20I%20want%20Baggy%20Jeans%2001">Order via WhatsApp</a>
-</div>
-</div>
-
-<div class="product">
-<img src="IMG_2108.png">
-<div class="product-content">
-<h3>Baggy Jeans 02</h3>
-<p class="price">£13 Per Piece | Min Order: 25</p>
-<a class="whatsapp-btn" href="https://wa.me/447561587249?text=Hi%20I%20want%20Baggy%20Jeans%2002">Order via WhatsApp</a>
-</div>
-</div>
-
-<div class="product">
+<div class="card">
 <img src="IMG_1793.jpeg">
-<div class="product-content">
-<h3>Embroidered Denim 01</h3>
-<p class="price">£13 Per Piece | Min Order: 25</p>
-<a class="whatsapp-btn" href="https://wa.me/447561587249?text=Hi%20I%20want%20Embroidered%20Denim">Order via WhatsApp</a>
+<div class="card-content">
+<h3>Baggy Jeans 01</h3>
+<p class="price">£13 Per Piece | Min Order 25</p>
+<a class="whatsapp-btn" href="https://wa.me/447561587249">Order on WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="IMG_2108.png">
+<div class="card-content">
+<h3>Baggy Jeans 02</h3>
+<p class="price">£13 Per Piece | Min Order 25</p>
+<a class="whatsapp-btn" href="https://wa.me/447561587249">Order on WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="IMG_2553.png">
+<div class="card-content">
+<h3>Embroidered Denim</h3>
+<p class="price">£13 Per Piece | Min Order 25</p>
+<a class="whatsapp-btn" href="https://wa.me/447561587249">Order on WhatsApp</a>
 </div>
 </div>
 
 </div>
 </section>
 
-<section class="section" id="about">
-<h2>ABOUT URBAN LOOPS</h2>
-<div class="about-box">
-Premium streetwear denim crafted for authentic urban style. We provide wholesale bulk orders worldwide with premium quality assurance.
-</div>
-</section>
-
-<section class="section">
-<div class="cta">
+<footer>
 <h2>READY TO ORDER?</h2>
-<p>Contact us directly via WhatsApp</p>
-<br>
-<a class="btn" href="https://wa.me/447561587249">WHATSAPP US</a>
-</div>
-</section>
-
-<div class="footer">
-© 2026 Urban Loops. All rights reserved.
-</div>
+<a href="https://wa.me/447561587249">WhatsApp Us</a>
+<a href="https://instagram.com/zamzam__vintage__">Follow on Instagram</a>
+<p style="margin-top:20px;opacity:0.5">© 2026 Urban Loops</p>
+</footer>
 
 <script>
 function toggleMenu(){
-document.getElementById('menu').classList.toggle('active');
+document.getElementById("menu").classList.toggle("active")
 }
 </script>
 
