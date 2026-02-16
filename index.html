@@ -4,104 +4,190 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Urban Loops</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#111;
+color:#fff;
+}
+
+/* NAVBAR */
+.nav{
+position:fixed;
+top:0;
+width:100%;
+background:#000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-box{
+border:2px solid #fff;
+padding:5px 8px;
+font-weight:700;
+}
+
+.menu{
+font-size:24px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('IMG_3021.jpeg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.7);
+padding:40px;
+border-radius:15px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:16px;
+margin-bottom:25px;
+color:#ccc;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#fff;
+color:#000;
+border-radius:30px;
+text-decoration:none;
+font-weight:500;
+}
+
+/* COLLECTION */
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:40px;
+font-size:28px;
+}
+
+.card{
+background:#1a1a1a;
+padding:20px;
+border-radius:15px;
+margin-bottom:25px;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.whatsapp{
+background:#25D366;
+color:#fff;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#000;
+margin-top:40px;
+font-size:14px;
+color:#aaa;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">
-        <div class="box">UL</div>
-        <span>Urban Loops</span>
-    </div>
-    <div class="menu-btn" onclick="toggleMenu()">⋮</div>
-</header>
-
-<div class="side-menu" id="sideMenu">
-    <a href="#collection">Products</a>
-    <a href="#custom">About</a>
-    <a href="https://instagram.com/" target="_blank">Instagram</a>
+<!-- NAVBAR -->
+<div class="nav">
+<div class="logo">
+<div class="logo-box">UL</div>
+<span>Urban Loops</span>
+</div>
+<div class="menu">☰</div>
 </div>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>URBAN<br>LOOPS</h1>
-        <h3>PREMIUM STREETWEAR DENIM</h3>
-        <p>Authentic baggy hip-hop embroidery jeans for global resellers.</p>
-        <a href="#collection" class="btn">VIEW COLLECTION ↓</a>
-    </div>
-</section>
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<h1>URBAN LOOPS</h1>
+<p>Premium streetwear denim for global resellers</p>
+<a href="#collection" class="btn">View Collection ↓</a>
+</div>
+</div>
 
-<section id="collection" class="collection">
-    <h2>OUR COLLECTION</h2>
+<!-- COLLECTION -->
+<div class="section" id="collection">
+<h2>Baggy Hip Hop Embroidery Bundles</h2>
 
-    <div class="tabs">
-        <button onclick="filterProducts('all')" class="active">All Products</button>
-        <button onclick="filterProducts('baggy')">Baggy Hip Hop Embroidery</button>
-        <button onclick="filterProducts('y2k')">Y2K Collection</button>
-        <button onclick="filterProducts('custom')">Custom Order</button>
-    </div>
+<div class="card">
+<img src="IMG_1793.jpeg">
+<h3>5 Design Bundle</h3>
+<p>25 Pieces Minimum Order</p>
+<a href="https://wa.me/923XXXXXXXXX" class="whatsapp">Request on WhatsApp</a>
+</div>
 
-    <div class="products">
+<div class="card">
+<img src="IMG_2108.png">
+<h3>10 Design Bundle</h3>
+<p>25 Pieces Minimum Order</p>
+<a href="https://wa.me/923XXXXXXXXX" class="whatsapp">Request on WhatsApp</a>
+</div>
 
-        <div class="card baggy">
-            <img src="bundle1.jpeg">
-            <h3>5 Design Bundle</h3>
-            <p>25 Pieces Minimum Order</p>
-            <a href="#" class="green-btn">Request Wholesale Price</a>
-        </div>
+<div class="card">
+<img src="IMG_2553.png">
+<h3>15 Design Bundle</h3>
+<p>25 Pieces Minimum Order</p>
+<a href="https://wa.me/923XXXXXXXXX" class="whatsapp">Request on WhatsApp</a>
+</div>
 
-        <div class="card baggy">
-            <img src="bundle2.jpeg">
-            <h3>10 Design Bundle</h3>
-            <p>25 Pieces Minimum Order</p>
-            <a href="#" class="green-btn">Request Wholesale Price</a>
-        </div>
+<div class="card">
+<h3>Custom Embroidery Manufacturing</h3>
+<p>Send your design image & quantity<br>Minimum: 25 Pieces</p>
+<a href="https://wa.me/923XXXXXXXXX" class="whatsapp">Send Design on WhatsApp</a>
+</div>
 
-        <div class="card baggy">
-            <img src="bundle3.jpeg">
-            <h3>15 Design Bundle</h3>
-            <p>25 Pieces Minimum Order</p>
-            <a href="#" class="green-btn">Request Wholesale Price</a>
-        </div>
-
-        <div class="card baggy">
-            <img src="bundle4.jpeg">
-            <h3>20 Design Bundle</h3>
-            <p>25 Pieces Minimum Order</p>
-            <a href="#" class="green-btn">Request Wholesale Price</a>
-        </div>
-
-        <div class="card baggy">
-            <img src="bundle5.jpeg">
-            <h3>25 Design Bundle</h3>
-            <p>25 Pieces Minimum Order</p>
-            <a href="#" class="green-btn">Request Wholesale Price</a>
-        </div>
-
-        <div class="card y2k">
-            <img src="y2k.jpeg">
-            <h3>Y2K Street Denim</h3>
-            <p>Bulk Orders Available</p>
-            <a href="#" class="green-btn">Request Wholesale Price</a>
-        </div>
-
-    </div>
-</section>
-
-<section id="custom" class="custom">
-    <h2>Custom Embroidery Manufacturing</h2>
-    <p>Send us your design reference image and required quantity.</p>
-    <p>Minimum Order: 25 Pieces</p>
-    <p>Production Time: 5–10 Days</p>
-    <a href="#" class="green-btn">Send Your Design on WhatsApp</a>
-</section>
+</div>
 
 <footer>
-    <p>© 2026 Urban Loops. All rights reserved.</p>
+© 2026 Urban Loops. All rights reserved.
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
