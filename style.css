@@ -1,117 +1,182 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f5f5f5;
 }
 
 header {
-  background: black;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  position: sticky;
-  top: 0;
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:black;
+color:white;
+z-index:1000;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.logo-box {
-  border: 2px solid white;
-  padding: 5px 10px;
-  margin-right: 10px;
+.logo .box {
+border:2px solid white;
+padding:6px 10px;
+font-weight:700;
 }
 
-.menu-icon {
-  font-size: 24px;
-  cursor: pointer;
+.menu-btn {
+font-size:24px;
+cursor:pointer;
 }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  right: 15px;
-  top: 60px;
-  background: black;
-  padding: 15px;
-  border-radius: 8px;
+.side-menu {
+position:fixed;
+right:-250px;
+top:0;
+width:250px;
+height:100%;
+background:black;
+display:flex;
+flex-direction:column;
+padding:80px 20px;
+transition:.4s;
 }
 
-.dropdown-menu a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  margin: 10px 0;
+.side-menu a {
+color:white;
+text-decoration:none;
+margin-bottom:20px;
+font-size:18px;
 }
 
 .hero {
-  background: url('IMG_2553.png') center/cover no-repeat;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+height:100vh;
+background:url("hero-bg.jpeg") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
 }
 
-.hero-overlay {
-  background: rgba(0,0,0,0.6);
-  padding: 40px;
-  border-radius: 15px;
+.hero::after {
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,50,.9));
+}
+
+.hero-content {
+position:relative;
+z-index:2;
+animation:fadeIn 1.5s ease;
+}
+
+.hero h1 {
+font-size:60px;
+margin:0;
+font-weight:900;
+}
+
+.hero h3 {
+color:#4da6ff;
 }
 
 .btn {
-  background: white;
-  color: black;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 25px;
-  display: inline-block;
-  margin-top: 20px;
+background:white;
+color:black;
+padding:12px 30px;
+border-radius:30px;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+transition:.3s;
+}
+
+.btn:hover {
+background:#4da6ff;
+color:white;
 }
 
 .collection {
-  padding: 40px 20px;
-  text-align: center;
+padding:100px 20px;
+text-align:center;
 }
 
-.product-card {
-  background: white;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 15px;
-  max-width: 400px;
+.tabs {
+margin-bottom:30px;
 }
 
-.product-card img {
-  width: 100%;
-  border-radius: 10px;
+.tabs button {
+border:none;
+padding:10px 20px;
+margin:5px;
+border-radius:20px;
+cursor:pointer;
 }
 
-.whatsapp-btn {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 25px;
-  margin-top: 15px;
+.tabs .active {
+background:black;
+color:white;
 }
 
-.custom-section {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
+.products {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card {
+background:white;
+padding:15px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover {
+transform:translateY(-10px);
+}
+
+.card img {
+width:100%;
+border-radius:15px;
+}
+
+.green-btn {
+background:#22c55e;
+color:white;
+padding:10px 20px;
+border-radius:30px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
+
+.custom {
+background:black;
+color:white;
+padding:80px 20px;
+text-align:center;
 }
 
 footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 20px;
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@keyframes fadeIn {
+from {opacity:0; transform:translateY(30px);}
+to {opacity:1; transform:translateY(0);}
 }
