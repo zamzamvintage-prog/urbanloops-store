@@ -10,28 +10,55 @@
 
 body{
 margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#000;
-color:#fff;
+font-family:Arial, Helvetica, sans-serif;
+background:#ffffff;
+color:#111;
 }
 
 /* NAVBAR */
 
-nav{
+.nav{
 position:fixed;
 top:0;
 width:100%;
-background:#000;
-padding:15px 20px;
+background:black;
+color:white;
+padding:18px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
 }
 
-nav h2{
-margin:0;
+.menu-btn{
+font-size:26px;
+cursor:pointer;
+}
+
+/* MENU */
+
+.menu{
+position:fixed;
+top:0;
+right:-100%;
+width:70%;
+height:100%;
+background:black;
+color:white;
+padding:40px;
+transition:.4s;
+}
+
+.menu a{
+display:block;
+color:white;
+text-decoration:none;
+margin:20px 0;
 font-size:20px;
+}
+
+.menu.active{
+right:0;
 }
 
 /* HERO */
@@ -40,94 +67,105 @@ font-size:20px;
 height:100vh;
 background:url("EA5CE40E-81E9-4405-919E.jpeg") center/cover no-repeat;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
+color:white;
 }
 
-.hero-content{
-background:rgba(0,0,0,0.6);
-padding:30px;
+.hero-overlay{
+background:rgba(0,0,0,.65);
+padding:40px;
 border-radius:15px;
 }
 
 .hero h1{
 font-size:42px;
-margin-bottom:10px;
+margin:0;
 }
 
 .hero p{
-color:#ccc;
+opacity:.8;
 }
 
 .btn{
+background:white;
+color:black;
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
 display:inline-block;
 margin-top:20px;
-padding:14px 30px;
-background:#fff;
-color:#000;
-border-radius:40px;
-text-decoration:none;
 font-weight:bold;
 }
 
-/* SECTION */
+/* COLLECTION */
 
 .section{
 padding:60px 20px;
-text-align:center;
+background:#f5f5f5;
 }
 
 .card{
-background:#111;
+background:white;
 border-radius:15px;
-padding:20px;
-margin:25px auto;
-max-width:420px;
+padding:15px;
+margin-bottom:30px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+text-align:center;
 }
 
 .card img{
 width:100%;
-border-radius:12px;
+border-radius:10px;
 }
 
 .order-btn{
 margin-top:15px;
 display:inline-block;
+background:black;
+color:white;
 padding:12px 25px;
-background:#fff;
-color:#000;
-border-radius:30px;
+border-radius:25px;
 text-decoration:none;
-font-weight:bold;
-}
-
-/* ABOUT */
-
-.about{
-background:#111;
-padding:50px 20px;
 }
 
 /* CTA */
 
 .cta{
-background:#000;
-text-align:center;
+background:black;
+color:white;
 padding:60px 20px;
+text-align:center;
 }
 
-.cta-box{
-background:#111;
-padding:40px;
-border-radius:20px;
+.cta a{
+display:block;
+margin:15px auto;
+width:220px;
+padding:14px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
 }
+
+.whatsapp{
+background:white;
+color:black;
+}
+
+.instagram{
+border:2px solid white;
+color:white;
+}
+
+/* FOOTER */
 
 .footer{
-background:#000;
+background:#111;
+color:white;
 padding:40px 20px;
 text-align:center;
-color:#aaa;
 }
 
 </style>
@@ -135,15 +173,22 @@ color:#aaa;
 
 <body>
 
-<!-- NAV -->
-<nav>
-<h2>Urban Loops</h2>
-☰
-</nav>
+<!-- NAVBAR -->
+<div class="nav">
+<div>Urban Loops</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+</div>
+
+<!-- SIDE MENU -->
+<div class="menu" id="menu">
+<a href="#">Products</a>
+<a href="#">About</a>
+<a href="https://instagram.com/zamzam_vintage_" target="_blank">Instagram</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-content">
+<div class="hero-overlay">
 <h1>URBAN LOOPS</h1>
 <p>Premium Streetwear Denim For Global Resellers</p>
 <a href="#collection" class="btn">Shop Collection ↓</a>
@@ -151,66 +196,55 @@ color:#aaa;
 </section>
 
 <!-- COLLECTION -->
-<section id="collection" class="section">
-
-<h2>Our Collection</h2>
+<section class="section" id="collection">
 
 <div class="card">
 <img src="IMG_1793.jpeg">
-<h3>Baggy Hip Hop Embroidery Jeans</h3>
-<a href="https://wa.me/447561587249" class="order-btn">
+<h2>Baggy Hip Hop Embroidery Jeans</h2>
+<a class="order-btn"
+href="https://wa.me/447561587249">
 Order Now
 </a>
 </div>
 
 <div class="card">
 <img src="IMG_2480.png">
-<h3>Baggy Hip Hop Embroidery Shorts</h3>
-<a href="https://wa.me/447561587249" class="order-btn">
+<h2>Baggy Hip Hop Embroidery Shorts</h2>
+<a class="order-btn"
+href="https://wa.me/447561587249">
 Order Now
 </a>
 </div>
 
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-<h2>About Urban Loops</h2>
-<p>
-Authentic baggy hip-hop jeans and embroidered denim
-for the modern urban lifestyle.
-Wholesale streetwear supplier worldwide.
-</p>
-</section>
-
 <!-- CTA -->
 <section class="cta">
-<div class="cta-box">
-
 <h2>Ready To Order?</h2>
-<p>Contact us directly via WhatsApp or follow Instagram</p>
 
-<br>
-
-<a class="btn"
+<a class="whatsapp"
 href="https://wa.me/447561587249">
 WhatsApp Us
 </a>
 
-<br><br>
-
-<a class="btn"
+<a class="instagram"
 href="https://instagram.com/zamzam_vintage_">
-Follow Instagram
+Follow Us
 </a>
 
-</div>
 </section>
 
 <!-- FOOTER -->
 <div class="footer">
-© 2026 Urban Loops — Premium Streetwear Denim
+© 2026 Urban Loops
 </div>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu")
+.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
