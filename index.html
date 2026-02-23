@@ -4,77 +4,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Urban Loops | Premium Streetwear</title>
+<title>Urban Loops</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 background:#000;
-color:white;
+color:#fff;
 }
 
 /* NAVBAR */
 
-.nav{
+nav{
 position:fixed;
 top:0;
 width:100%;
 background:#000;
+padding:15px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
 z-index:1000;
 }
 
-.logo{
+nav h2{
+margin:0;
 font-size:20px;
-font-weight:bold;
-}
-
-.menu{
-font-size:24px;
-cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
 height:100vh;
-background:url("YOUR-IMAGE.jpg") center/cover no-repeat;
+background:url("EA5CE40E-81E9-4405-919E.jpeg") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
 }
 
-.hero-box{
-background:rgba(0,0,0,0.65);
+.hero-content{
+background:rgba(0,0,0,0.6);
 padding:30px;
 border-radius:15px;
 }
 
 .hero h1{
 font-size:42px;
-margin:0;
+margin-bottom:10px;
 }
 
 .hero p{
 color:#ccc;
-margin:15px 0;
 }
 
 .btn{
-background:white;
-color:black;
-padding:15px 30px;
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:#fff;
+color:#000;
 border-radius:40px;
 text-decoration:none;
 font-weight:bold;
-display:inline-block;
 }
 
 /* SECTION */
@@ -84,31 +78,25 @@ padding:60px 20px;
 text-align:center;
 }
 
-.section h2{
-font-size:28px;
-margin-bottom:20px;
-}
-
-/* PRODUCT CARD */
-
 .card{
 background:#111;
 border-radius:15px;
 padding:20px;
-margin-bottom:25px;
+margin:25px auto;
+max-width:420px;
 }
 
 .card img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 }
 
 .order-btn{
 margin-top:15px;
 display:inline-block;
-background:white;
-color:black;
 padding:12px 25px;
+background:#fff;
+color:#000;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
@@ -116,47 +104,26 @@ font-weight:bold;
 
 /* ABOUT */
 
-.about-box{
+.about{
 background:#111;
-padding:25px;
-border-radius:15px;
-margin-bottom:20px;
-}
-
-/* CONTACT */
-
-.contact{
-background:#000;
 padding:50px 20px;
+}
+
+/* CTA */
+
+.cta{
+background:#000;
 text-align:center;
+padding:60px 20px;
 }
 
-.whatsapp{
-background:white;
-color:black;
-padding:15px 30px;
-border-radius:40px;
-text-decoration:none;
-display:block;
-margin:10px auto;
-width:220px;
-font-weight:bold;
+.cta-box{
+background:#111;
+padding:40px;
+border-radius:20px;
 }
 
-.instagram{
-border:2px solid white;
-padding:15px 30px;
-border-radius:40px;
-text-decoration:none;
-display:block;
-margin:10px auto;
-width:220px;
-color:white;
-}
-
-/* FOOTER */
-
-footer{
+.footer{
 background:#000;
 padding:40px 20px;
 text-align:center;
@@ -168,32 +135,28 @@ color:#aaa;
 
 <body>
 
-<!-- NAVBAR -->
-<div class="nav">
-<div class="logo">Urban Loops</div>
-<div class="menu">☰</div>
-</div>
+<!-- NAV -->
+<nav>
+<h2>Urban Loops</h2>
+☰
+</nav>
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-box">
+<div class="hero-content">
 <h1>URBAN LOOPS</h1>
 <p>Premium Streetwear Denim For Global Resellers</p>
-
-<a href="#products" class="btn">
-Shop Collection ↓
-</a>
-
+<a href="#collection" class="btn">Shop Collection ↓</a>
 </div>
 </section>
 
-<!-- PRODUCTS -->
-<section id="products" class="section">
+<!-- COLLECTION -->
+<section id="collection" class="section">
 
 <h2>Our Collection</h2>
 
 <div class="card">
-<img src="jeans.jpg">
+<img src="IMG_1793.jpeg">
 <h3>Baggy Hip Hop Embroidery Jeans</h3>
 <a href="https://wa.me/447561587249" class="order-btn">
 Order Now
@@ -201,66 +164,53 @@ Order Now
 </div>
 
 <div class="card">
-<img src="shorts.jpg">
+<img src="IMG_2480.png">
 <h3>Baggy Hip Hop Embroidery Shorts</h3>
 <a href="https://wa.me/447561587249" class="order-btn">
 Order Now
 </a>
 </div>
 
-<div class="card">
-<h3>Custom Order</h3>
-<p>Bulk custom embroidery & wholesale production available</p>
-
-<a href="https://wa.me/447561587249" class="order-btn">
-Request Custom Order
-</a>
-
-</div>
-
 </section>
 
 <!-- ABOUT -->
-<section class="section">
-
+<section class="about">
 <h2>About Urban Loops</h2>
-
-<div class="about-box">
-<h3>Premium Quality</h3>
-<p>Hand-picked denim with authentic hip hop streetwear fit.</p>
-</div>
-
-<div class="about-box">
-<h3>Worldwide Shipping</h3>
-<p>Wholesale bulk shipping available worldwide.</p>
-</div>
-
+<p>
+Authentic baggy hip-hop jeans and embroidered denim
+for the modern urban lifestyle.
+Wholesale streetwear supplier worldwide.
+</p>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
+<!-- CTA -->
+<section class="cta">
+<div class="cta-box">
 
 <h2>Ready To Order?</h2>
+<p>Contact us directly via WhatsApp or follow Instagram</p>
 
-<a href="https://wa.me/447561587249" class="whatsapp">
-WhatsApp Order
+<br>
+
+<a class="btn"
+href="https://wa.me/447561587249">
+WhatsApp Us
 </a>
 
-<a href="https://instagram.com/zamzam_vintage_" class="instagram">
+<br><br>
+
+<a class="btn"
+href="https://instagram.com/zamzam_vintage_">
 Follow Instagram
 </a>
 
+</div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-
-<p>Urban Loops</p>
-<p>Premium Baggy Hip Hop Denim</p>
-
-<p>© 2026 Urban Loops</p>
-
-</footer>
+<div class="footer">
+© 2026 Urban Loops — Premium Streetwear Denim
+</div>
 
 </body>
 </html>
