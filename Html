@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Urban Loops</title>
+
+<style>
+
+/* ===== RESET ===== */
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+overflow-x:hidden;
+background:#ffffff;
+}
+
+/* ===== NAVBAR ===== */
+.nav{
+position:fixed;
+top:0;
+width:100%;
+background:black;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+z-index:9999;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+.menu-btn{
+font-size:28px;
+cursor:pointer;
+}
+
+/* ===== SIDE MENU ===== */
+.side-menu{
+position:fixed;
+top:0;
+right:-260px;
+width:260px;
+height:100%;
+background:black;
+color:white;
+padding-top:80px;
+transition:0.4s;
+z-index:9998;
+}
+
+.side-menu a{
+display:block;
+color:white;
+padding:15px 25px;
+text-decoration:none;
+font-size:18px;
+}
+
+.side-menu a:hover{
+background:#222;
+}
+
+.side-menu.active{
+right:0;
+}
+
+/* ===== HERO ===== */
+.hero{
+height:100vh;
+width:100%;
+background:url("EA5CE40E-81E9-4405-919E-E2A0A9394AC4.jpeg")
+center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero-box{
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:20px;
+}
+
+.hero h1{
+font-size:42px;
+margin:0;
+}
+
+.hero p{
+margin-top:10px;
+}
+
+.btn{
+margin-top:20px;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* ===== PRODUCTS ===== */
+.section{
+padding:60px 20px;
+background:#f5f5f5;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px auto;
+border-radius:15px;
+max-width:400px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.order-btn{
+margin-top:15px;
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:black;
+color:white;
+cursor:pointer;
+}
+
+/* ===== ABOUT ===== */
+.about{
+background:white;
+padding:60px 20px;
+text-align:center;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+background:black;
+color:white;
+padding:40px 20px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="nav">
+<div class="logo">Urban Loops</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+</div>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+<a href="#products" onclick="toggleMenu()">Products</a>
+<a href="#about" onclick="toggleMenu()">About Us</a>
+<a href="https://instagram.com/zamzam_vintage_" target="_blank">Instagram</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-box">
+<h1>URBAN LOOPS</h1>
+<p>Premium Streetwear Denim For Global Resellers</p>
+<button class="btn"
+onclick="document.getElementById('products').scrollIntoView()">
+Shop Collection ↓
+</button>
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section">
+
+<div class="card">
+<img src="IMG_1793.jpeg">
+<h3>Baggy Hip Hop Embroidery Jeans</h3>
+<button class="order-btn">Order Now</button>
+</div>
+
+<div class="card">
+<img src="IMG_2480.png">
+<h3>Baggy Hip Hop Embroidery Shorts</h3>
+<button class="order-btn">Order Now</button>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+<h2>About Urban Loops</h2>
+<p>
+Urban Loops is a premium streetwear denim brand focused on
+baggy hip-hop embroidery jeans and shorts for global resellers.
+We provide bulk manufacturing and worldwide shipping.
+</p>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+<p>© 2026 Urban Loops</p>
+</div>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
