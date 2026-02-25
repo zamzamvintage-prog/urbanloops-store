@@ -267,12 +267,26 @@ We provide bulk manufacturing and worldwide shipping.
 </div>
 
 <script>
+
 function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
+ document.getElementById("menu").classList.toggle("active");
 }
 
-</script>
+/* 👇 باہر click کرنے پر menu بند */
+document.addEventListener("click", function(event) {
 
+  let menu = document.getElementById("menu");
+  let menuBtn = document.querySelector(".menu-btn");
+
+  if (!menu.contains(event.target) &&
+      !menuBtn.contains(event.target)) {
+
+      menu.classList.remove("active");
+  }
+
+});
+
+</script>
 <!-- VIDEO SCRIPT -->
 <script>
 function playVideo(){
