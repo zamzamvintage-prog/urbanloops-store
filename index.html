@@ -22,6 +22,7 @@ background:#ffffff;
 position:fixed;
 top:0;
 width:100%;
+height:65px;
 background:white;
 color:white;
 display:flex;
@@ -233,9 +234,16 @@ border-radius:6px;
   font-size:14px;
   color:#aaa;
 }
-  .logo img{
-  height:40px;
+  .logo{
+  display:flex;
+  align-items:center;
+}
+
+.logo img{
+  height:42px;
   width:auto;
+  object-fit:contain;
+}
 }
 </style>
 </head>
@@ -247,8 +255,8 @@ border-radius:6px;
 <div class="nav">
 
   <div class="logo">
-    <img src="IMG_0758.png" alt="Urban Loops Logo">
-  </div>
+  <img src="6F70CF3B-E59B-44B3-AFC0-169DF8A64BA2.png" alt="Urban Loops Logo">
+</div>
 
   <div class="menu-btn" onclick="toggleMenu()">
     <span></span>
